@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: jakejarvis/s3-sync-action@v1
+    - uses: jakejarvis/s3-sync-action@1.32.74
       with:
         args: --acl public-read --follow-symlinks --delete --exclude '.git*/*'
       env:
