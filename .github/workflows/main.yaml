@@ -1,0 +1,13 @@
+name: Upload Website
+
+on:
+  push:
+    branches:
+    - demo
+
+jobs:
+  test:
+    runson: ubuntu-latest
+    steps:
+      - echo "Start tests"
+      - echo "success"
