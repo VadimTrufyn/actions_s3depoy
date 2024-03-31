@@ -20,8 +20,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - uses: jakejarvis/s3-sync-action@1.32.74
+      - uses: aws-actions/configure-aws-credentials@v2
       with:
         args: --acl public-read --follow-symlinks --delete --exclude '.git*/*'
       env:
