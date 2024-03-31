@@ -3,11 +3,16 @@ name: Upload Website
 on:
   push:
     branches:
-    - demo
+      - demo
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - echo "Start tests"
-      - echo "success"
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Run tests
+        run: |
+          echo "Start tests"
+          echo "success"
